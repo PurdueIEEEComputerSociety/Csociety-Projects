@@ -21,27 +21,35 @@
   <div ng-app="codeCafe" ng-cloak="" ng-controller="indexCtrl">
 
     <md-content class="headerNav">
-     <md-toolbar class="md-pimary md-hue-2">
+     <md-toolbar class="md-primary md-hue-2">
        <div class="md-toolbar-tools">
          <h2 class="headerLogo">
            <a href="/"><span class="md-headline">CodeCafe!</span></a>
          </h2>
          <span flex=""></span>
 				 <span class="md-subhead"><a href="signup"><md-button class="md-accent navBut">Sign Up!</md-button></a></span>
+         <span class="md-subhead"><a href="launchIDE"><md-button class="md-accent navBut">CodeCafe IDE</md-button></a></span>
        </div>
      </md-toolbar>
    </md-content>
 
-   <div layout="row" layout-align="space-around center">
-     <div layout="column" layout-align="">
-        <h1 class="md-display-2"> IEEE CodeCafe! </h1>
-        <h1 class="md-headline"> Saturday, 25th March, 2017 </h1>
+   <md-content>
+     <div layout="row" layout-align="space-around center">
+       <div layout="column" layout-align="">
+          <h1 class="md-display-2"> IEEE CodeCafe! </h1>
+          <h1 class="md-headline"> Saturday, 25th March, 2017 </h1>
+          <h1 class="md-headline"> HICKS G980D </h1>
+          <md-button class="md-primary md-raised"> Sign Up! </md-button>
+      </div>
+      <img src="../static/assets/testDolphin.jpg"></img>
     </div>
-    <div layout="column" layout-align="">
-       <h1 class="md-display-2"> IEEE CodeCafe! </h1>
-       <h1 class="md-headline"> Saturday, 25th March, 2017 </h1>
-     </div>
-  </div>
+  </md-content>
+
+  <md-content>
+    <div layout="row" layout-align="center" class="section2">
+      <img src="../static/assets/testDolphin.jpg"></img>
+    </div>
+  </md-content>
 
   </div>
   {%endraw%}
