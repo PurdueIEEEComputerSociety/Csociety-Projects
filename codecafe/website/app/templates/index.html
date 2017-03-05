@@ -1,0 +1,49 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Purdue IEEE Computer Society CodeCafe">
+  <meta name="keywords" content="C,C++,html,css,javascript,programming,natural language,artificial intelligence,voice programming,cyber-security,hacking">
+	<meta name="author" content="Sid Shah">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+  <script src="../static/js/jquery-3.1.1.min.js"></script>
+  <link rel="stylesheet" href="../static/css/angular-material.min.css">
+  <script src="../static/node_modules/angular/angular.js"></script>
+	<script src="../static/node_modules/angular-aria/angular-aria.js"></script>
+	<script src="../static/node_modules/angular-animate/angular-animate.js"></script>
+	<script src="../static/node_modules/angular-material/angular-material.min.js"></script>
+	<script src="../static/node_modules/angular-messages/angular-messages.min.js"></script>
+  <link rel="stylesheet" href="../static/css/index.css">
+  <script src="../static/js/index.js"></script>
+  <title> Purdue IEEE CodeCafe! </title>
+</head>
+<body>
+  {%raw%}
+  <div ng-app="codeCafe" ng-cloak="" ng-controller="indexCtrl">
+
+    <md-content class="headerNav">
+     <md-toolbar class="md-pimary md-hue-2">
+       <div class="md-toolbar-tools">
+         <h2 class="headerLogo">
+           <a href="/"><span class="md-headline">CodeCafe!</span></a>
+         </h2>
+         <span flex=""></span>
+				 <span class="md-subhead"><a href="signup"><md-button class="md-accent navBut">Sign Up!</md-button></a></span>
+       </div>
+     </md-toolbar>
+   </md-content>
+
+   <div layout="row" layout-align="space-around center">
+     <div layout="column" layout-align="">
+        <h1 class="md-display-2"> IEEE CodeCafe! </h1>
+        <h1 class="md-headline"> Saturday, 25th March, 2017 </h1>
+    </div>
+    <div layout="column" layout-align="">
+       <h1 class="md-display-2"> IEEE CodeCafe! </h1>
+       <h1 class="md-headline"> Saturday, 25th March, 2017 </h1>
+     </div>
+  </div>
+
+  </div>
+  {%endraw%}
+</body>
+</html>
