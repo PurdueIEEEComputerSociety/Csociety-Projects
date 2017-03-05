@@ -12,4 +12,13 @@
 
 .section2{
   padding-top: 10%;
+  padding-bottom: 10%;
+}
+
+.ccInfo{
+  width: 50%;
+}
+
+.infoHeader{
+  padding-left: 5%;
 }
