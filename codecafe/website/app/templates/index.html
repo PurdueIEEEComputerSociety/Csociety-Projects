@@ -14,7 +14,7 @@
 	<script src="../static/node_modules/angular-messages/angular-messages.min.js"></script>
   <link rel="stylesheet" href="../static/css/index.css">
   <script src="../static/js/index.js"></script>
-  <title> Purdue IEEE CodeCafe! </title>
+  <title> Purdue IEEE Code Cafe! </title>
 </head>
 <body>
   {%raw%}
@@ -24,11 +24,11 @@
      <md-toolbar class="md-primary md-hue-2">
        <div class="md-toolbar-tools">
          <h2 class="headerLogo">
-           <a href="/"><span class="md-headline">CodeCafe!</span></a>
+           <a href="/"><span class="md-headline">Code Cafe!</span></a>
          </h2>
          <span flex=""></span>
 				 <span class="md-subhead"><a href="signup"><md-button class="md-accent navBut">Sign Up!</md-button></a></span>
-         <span class="md-subhead"><a href="launchIDE"><md-button class="md-accent navBut">CodeCafe IDE</md-button></a></span>
+         <span class="md-subhead"><a href="launchIDE"><md-button class="md-accent navBut">Code Cafe IDE</md-button></a></span>
        </div>
      </md-toolbar>
    </md-content>
@@ -36,10 +36,10 @@
    <md-content>
      <div layout="row" layout-align="space-around center">
        <div layout="column" layout-align="">
-          <h1 class="md-display-2"> IEEE CodeCafe! </h1>
+          <h1 class="md-display-2"> IEEE Code Cafe! </h1>
           <h1 class="md-headline"> Saturday, 25th March, 2017 </h1>
           <h1 class="md-headline"> HICKS G980D </h1>
-          <md-button class="md-primary md-raised"> Sign Up! </md-button>
+          <md-button class="md-primary md-raised" ng-click="redirectSignup()"> Sign Up! </md-button>
       </div>
       <img src="../static/assets/testDolphin.jpg"></img>
     </div>
@@ -51,13 +51,13 @@
     </div>
   </md-content>
 
-  <div layout="column">
+  <div layout="column" layout-align="space-between center">
     <div layout="row" layout-align="space-around">
       <img src="../static/assets/codecafe_final.jpg" style="height:50%;width:40%"></img>
       <div class="ccInfo">
         <md-card md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}" md-theme-watch flex>
           <md-toolbar>
-            <h1 class="md-headline infoHeader">What is CodeCafe!?</h1>
+            <h1 class="md-headline infoHeader">What is Code Cafe!?</h1>
           </md-toolbar>
           <md-card-content>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ut varius nisl, ut euismod magna. Aenean dapibus ex et magna auctor, id rhoncus leo posuere. Morbi facilisis ipsum neque, ac faucibus dui tincidunt a. In euismod pulvinar nisl, vitae lobortis enim blandit ut. Mauris ante tellus, rutrum accumsan augue at, ornare iaculis magna. Ut pharetra interdum ex, et tincidunt felis ullamcorper id. Sed eget ligula nisl. Donec quis diam nec ante elementum porta. Cras congue ante et est sodales molestie. Donec pretium ut nisl vel posuere. Vivamus placerat urna massa, vestibulum semper eros vestibulum non. Etiam aliquet consequat tellus, at auctor magna facilisis at. Duis id condimentum nunc. Fusce finibus lectus lorem, in tempus quam vehicula vitae.</p>
@@ -66,7 +66,55 @@
       </div>
     </div>
 
-    
+    <div layout="row" layout-align="space-around" class="section2">
+      <div class="ccInfo">
+        <md-card md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}" md-theme-watch flex>
+          <md-toolbar>
+            <h1 class="md-headline infoHeader">How is Code Cafe structured?</h1>
+          </md-toolbar>
+          <md-card-content>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ut varius nisl, ut euismod magna. Aenean dapibus ex et magna auctor, id rhoncus leo posuere. Morbi facilisis ipsum neque, ac faucibus dui tincidunt a. In euismod pulvinar nisl, vitae lobortis enim blandit ut. Mauris ante tellus, rutrum accumsan augue at, ornare iaculis magna. Ut pharetra interdum ex, et tincidunt felis ullamcorper id. Sed eget ligula nisl. Donec quis diam nec ante elementum porta. Cras congue ante et est sodales molestie. Donec pretium ut nisl vel posuere. Vivamus placerat urna massa, vestibulum semper eros vestibulum non. Etiam aliquet consequat tellus, at auctor magna facilisis at. Duis id condimentum nunc. Fusce finibus lectus lorem, in tempus quam vehicula vitae.</p>
+          </md-card-content>
+        </md-card>
+      </div>
+      <img src="../static/assets/codecafe_final.jpg" style="height:50%;width:40%"></img>
+    </div>
+
+    <div layout="row" layout-align="space-around">
+      <img src="../static/assets/codecafe_final.jpg" style="height:50%;width:40%"></img>
+      <div class="ccInfo">
+        <md-card md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}" md-theme-watch flex>
+          <md-toolbar>
+            <h1 class="md-headline infoHeader">What to bring?</h1>
+          </md-toolbar>
+          <md-card-content>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ut varius nisl, ut euismod magna. Aenean dapibus ex et magna auctor, id rhoncus leo posuere. Morbi facilisis ipsum neque, ac faucibus dui tincidunt a. In euismod pulvinar nisl, vitae lobortis enim blandit ut. Mauris ante tellus, rutrum accumsan augue at, ornare iaculis magna. Ut pharetra interdum ex, et tincidunt felis ullamcorper id. Sed eget ligula nisl. Donec quis diam nec ante elementum porta. Cras congue ante et est sodales molestie. Donec pretium ut nisl vel posuere. Vivamus placerat urna massa, vestibulum semper eros vestibulum non. Etiam aliquet consequat tellus, at auctor magna facilisis at. Duis id condimentum nunc. Fusce finibus lectus lorem, in tempus quam vehicula vitae.</p>
+          </md-card-content>
+        </md-card>
+      </div>
+    </div>
+
+    <div layout="row" layout-align="space-around" class="section3">
+      <div class="ccInfo">
+        <md-card md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}" md-theme-watch flex>
+          <md-toolbar>
+            <h1 class="md-headline infoHeader">Historic Stats</h1>
+          </md-toolbar>
+          <md-card-content>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ut varius nisl, ut euismod magna. Aenean dapibus ex et magna auctor, id rhoncus leo posuere. Morbi facilisis ipsum neque, ac faucibus dui tincidunt a. In euismod pulvinar nisl, vitae lobortis enim blandit ut. Mauris ante tellus, rutrum accumsan augue at, ornare iaculis magna. Ut pharetra interdum ex, et tincidunt felis ullamcorper id. Sed eget ligula nisl. Donec quis diam nec ante elementum porta. Cras congue ante et est sodales molestie. Donec pretium ut nisl vel posuere. Vivamus placerat urna massa, vestibulum semper eros vestibulum non. Etiam aliquet consequat tellus, at auctor magna facilisis at. Duis id condimentum nunc. Fusce finibus lectus lorem, in tempus quam vehicula vitae.</p>
+          </md-card-content>
+        </md-card>
+      </div>
+      <img src="../static/assets/codecafe_final.jpg" style="height:50%;width:40%"></img>
+    </div>
+
+    <div layout="row" layout-align="space-around">
+      <h1 class="md-display-2"> Sponsors </h1>
+    </div>
+    <div layout="row" layout-align="space-around" class="section3">
+      <img src="../static/assets/codecafe_final.jpg" style="height:50%;width:40%"></img>
+      <img src="../static/assets/codecafe_final.jpg" style="height:50%;width:40%"></img>
+    </div>
 
   </div>
 

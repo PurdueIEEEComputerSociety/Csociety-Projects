@@ -12,4 +12,14 @@ def index():
 
 @app.route('/signup')
 def signUp():
-    return jsonify({'result': False})
+    return render_template('signup.html')
+
+@app.route('/launchIDE')
+def ideLaunch():
+    return render_template('ccIDE.html')
+
+@app.route('/postSignupInfo', methods = ['POST'])
+def postSignup():
+    if request.method == 'POST':
+        return jsonify({'result':True})
+    return jsonify({'result':False})
