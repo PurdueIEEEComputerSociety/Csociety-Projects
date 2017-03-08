@@ -70,7 +70,10 @@
             <md-radio-group ng-model="user.sex">
               <md-radio-button value="1" class="md-primary">Male</md-radio-button>
               <md-radio-button value="2" class="md-primary">Female</md-radio-button>
-              <md-radio-button value="3" class="md-primary">Other</md-radio-button>
+              <md-input-container>
+                <label>Other</label>
+                <input ng-model="genText" class="md-primary"></md-radio-button>
+              </md-input-container>
             </md-radio-group>
 
             <h1 class="md-subhead"> Programming Experience </h1>

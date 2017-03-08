@@ -19,6 +19,10 @@ app.controller("indexCtrl", function($scope, $http, $window, $mdDialog){
       }else{
         if($scope.user.sex == null){
           $scope.user.sex = "";
+          $scope.user.sex = $scope.genText;
+          if($scope.user.sex == null){
+            $scope.user.sex = "";
+          }
         }
         if($scope.user.pxp == null){
           $scope.user.pxp = "";
