@@ -21,5 +21,11 @@ def ideLaunch():
 @app.route('/postSignupInfo', methods = ['POST'])
 def postSignup():
     if request.method == 'POST':
-        return jsonify({'result':True})
+        data = json.loads(request.data.decode())
+        print data
+        return jsonify({'result':True,'error':"Test"})
     return jsonify({'result':False})
+
+@app.route('/skillPage')
+def loadSkills():
+    return render_template('index.html')
