@@ -46,7 +46,8 @@ app.controller("indexCtrl", function($scope, $http, $window, $mdDialog){
                 // Showing errors toasts
                 console.log("Error adding post in database");
               } else {
-                console.log(data)
+                console.log(data);
+                $window.location.href = "/skillPage";
               }
             });
       }

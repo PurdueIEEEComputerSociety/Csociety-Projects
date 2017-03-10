@@ -5,6 +5,7 @@ import json
 import csv
 
 app = Flask(__name__)
+app.secret_key = 'Tq123asdlqiw1093uamp19'
 CORS(app)
 
 @app.route('/')
@@ -23,13 +24,21 @@ def ideLaunch():
 def postSignup():
     if request.method == 'POST':
         data = json.loads(request.data.decode())
+        session['name'] = data['name']
+        session['email'] = data['email']
         with open('./allData.csv','ab') as f:
             w = csv.DictWriter(f, data.keys())
-            # w.writeheader()
+            # w.writeheader()   #toggle this on when running for the first time
             w.writerow(data)
         return jsonify({'result':True,'error':"Test"})
     return jsonify({'result':False})
 
 @app.route('/skillPage')
 def loadSkills():
-    return render_template('index.html')
+    if not session.get('name') or not session.get('email'):
+        return redirect('/')
+    return render_template('skillsPage.html', name = session['name'], email = session['email'])
+
+@app.route('/skillsSubmit')
+def saveSkills():
+    return jsonify({'result' : False})
