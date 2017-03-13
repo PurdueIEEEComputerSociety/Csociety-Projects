@@ -19,39 +19,39 @@ app.controller("skillCtrl", function($scope, $http, $window, $mdDialog){
     var intSkillColl = [];
     var advSkillColl = [];
     if($scope.begSkill1 != null){
-        begSkillColl.push($scope.begSkill1);
+        begSkillColl.push("vadtype");
     }
     if($scope.begSkill2 != null){
-        begSkillColl.push($scope.begSkill2);
+        begSkillColl.push("cflow");
     }
     if($scope.begSkill3 != null){
-        begSkillColl.push($scope.begSkill3);
+        begSkillColl.push("fmeths");
     }
 
     if($scope.intSkill1 != null){
-        intSkillColl.push($scope.intSkill1);
+        intSkillColl.push("objs");
     }
     if($scope.intSkill2 != null){
-        intSkillColl.push($scope.intSkill2);
+        intSkillColl.push("cbacks");
     }
     if($scope.intSkill3 != null){
-        intSkillColl.push($scope.intSkill3);
+        intSkillColl.push("dstructs");
     }
     if($scope.intSkill4 != null){
-        intSkillColl.push($scope.intSkill4);
+        intSkillColl.push("restapi");
     }
 
     if($scope.advSkill1 != null){
-        advSkillColl.push($scope.advSkill1);
+        advSkillColl.push("webGL");
     }
     if($scope.advSkill2 != null){
-        advSkillColl.push($scope.advSkill2);
+        advSkillColl.push("gprog");
     }
     if($scope.advSkill3 != null){
-        advSkillColl.push($scope.advSkill3);
+        advSkillColl.push("nodejs");
     }
     if($scope.advSkill4 != null){
-        advSkillColl.push($scope.advSkill4);
+        advSkillColl.push("spjs");
     }
 
     var skillColl = {
@@ -72,7 +72,7 @@ app.controller("skillCtrl", function($scope, $http, $window, $mdDialog){
             console.log("Error adding post in database");
           } else {
             console.log(data);
-            $window.location.href = "/qrGen";
+            $window.location.href = "/thankSignup";
           }
         });
   };

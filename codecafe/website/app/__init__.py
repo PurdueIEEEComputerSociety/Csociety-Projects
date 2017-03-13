@@ -39,9 +39,23 @@ def loadSkills():
         return redirect('/')
     return render_template('skillsPage.html', name = session['name'], email = session['email'])
 
-@app.route('/skillsSubmit')
+@app.route('/skillsSubmit', methods = ['POST'])
 def saveSkills():
+    if request.method == 'POST':
+        data = json.loads(request.data.decode())
+        saveData = {}
+        saveData['email'] = session['email']
+        saveData['skills'] = data
+        with open('./skillData.csv', 'ab') as f:
+            w = csv.DictWriter(f, saveData.keys())
+            # w.writeheader()
+            w.writerow(saveData)
+        return jsonify({'result' : True})
     return jsonify({'result' : False})
+
+@app.route('/thankSignup')
+def thankSu():
+    return render_template('index.html')
 
 @app.route('/qrGen')
 def genQR():
