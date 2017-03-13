@@ -42,3 +42,11 @@ def loadSkills():
 @app.route('/skillsSubmit')
 def saveSkills():
     return jsonify({'result' : False})
+
+@app.route('/qrGen')
+def genQR():
+    return jsonify({'result' : False})
+
+@app.route('/memeCompetition')
+def storeMeme():
+    return jsonify({'result' : False})
