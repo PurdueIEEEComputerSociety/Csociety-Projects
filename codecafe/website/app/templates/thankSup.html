@@ -1,0 +1,48 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Purdue IEEE Computer Society CodeCafe">
+  <meta name="keywords" content="C,C++,html,css,javascript,programming,natural language,artificial intelligence,voice programming,cyber-security,hacking">
+	<meta name="author" content="Sid Shah">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+  <script src="../static/js/jquery-3.1.1.min.js"></script>
+  <link rel="stylesheet" href="../static/css/angular-material.min.css">
+  <script src="../static/node_modules/angular/angular.js"></script>
+	<script src="../static/node_modules/angular-aria/angular-aria.js"></script>
+	<script src="../static/node_modules/angular-animate/angular-animate.js"></script>
+	<script src="../static/node_modules/angular-material/angular-material.min.js"></script>
+	<script src="../static/node_modules/angular-messages/angular-messages.min.js"></script>
+  <link rel="stylesheet" href="../static/css/index.css">
+  <script src="../static/js/skillz.js"></script>
+  <title> Purdue IEEE Code Cafe! </title>
+</head>
+<body ng-app="codeCafe">
+  <div ng-cloak="">
+    <md-content class="headerNav">
+     <md-toolbar class="md-primary md-hue-2">
+       <div class="md-toolbar-tools">
+         <h2 class="headerLogo">
+           <a href="/"><span class="md-headline">IEEE Code Cafe!</span></a>
+         </h2>
+         <span flex=""></span>
+         <h2 class="md-subhead"> Hi {{name}} </h2>
+       </div>
+     </md-toolbar>
+   </md-content>
+
+   {%raw%}
+
+  <md-card md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}" md-theme-watch flex>
+    <md-toolbar>
+      <h1 class="md-headline infoHeader">Thanks for signing up!</h1>
+    </md-toolbar>
+    <md-card-content>
+      <p class="md-headline">You will receive an email soon confirming your registration and the required QR Code identifying your skills. See you on 25th March in HICK G980D!</p>
+    </md-card-content>
+    <a href="/"><md-button>Go Back</md-button></a>
+  </md-card>
+
+  {%endraw%}
+  </div>
+</body>
+</html>

@@ -55,7 +55,10 @@ def saveSkills():
 
 @app.route('/thankSignup')
 def thankSu():
-    return render_template('index.html')
+    tempName = session['name']
+    # session.pop('name', None)
+    # session.pop('email', None)
+    return render_template('thankSup.html', name = tempName)
 
 @app.route('/qrGen')
 def genQR():
